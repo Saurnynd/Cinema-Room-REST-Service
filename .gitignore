@@ -1,0 +1,7 @@
+# Project exclude paths
+/.gradle/
+/Cinema Room REST Service/task/build/
+/Cinema Room REST Service/task/out/
+/Cinema Room REST Service/task/out/production/classes/
+/Topics/The Set interface/Spell checker/out/
+/Topics/The Set interface/Spell checker/out/production/classes/
