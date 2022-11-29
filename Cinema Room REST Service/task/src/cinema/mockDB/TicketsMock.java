@@ -4,7 +4,6 @@ import cinema.items.Ticket;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 public class TicketsMock {
     private static List<Ticket> tickets = new ArrayList<>();
