@@ -7,7 +7,7 @@ import java.util.List;
 public class Cinema {
     int total_rows;
     int total_columns;
-    static List<Seat> available_seats;
+    List<Seat> available_seats;
 
     public Cinema() {
     }

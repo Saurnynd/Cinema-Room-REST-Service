@@ -2,11 +2,7 @@ package cinema.mockDB;
 
 import cinema.items.Cinema;
 import cinema.items.Seat;
-import cinema.items.Ticket;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
 
 public class CinemaMock {
     private static final Cinema cinema = new Cinema(9, 9);

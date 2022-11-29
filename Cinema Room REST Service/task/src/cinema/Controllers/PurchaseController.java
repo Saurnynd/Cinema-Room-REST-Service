@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import static cinema.Config.MESSAGE_ALREADY_PURCHASE;
+import static cinema.Config.MESSAGE_OUT_OF_BOUNDS;
+
 @RestController
 public class PurchaseController {
 
@@ -24,14 +27,10 @@ public class PurchaseController {
 
         } catch (SeatOutOfBounds e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                    .body("{\n" +
-                            "    \"error\": \"The number of a row or a column is out of bounds!\"\n" +
-                            "}");
+                    .body(MESSAGE_OUT_OF_BOUNDS);
         } catch (SeatAlreadyRepurchased e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                    .body("{\n" +
-                            "    \"error\": \"The ticket has been already purchased!\"\n" +
-                            "}");
+                    .body(MESSAGE_ALREADY_PURCHASE);
         } catch (NullPointerException e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                     .body(e.getMessage());

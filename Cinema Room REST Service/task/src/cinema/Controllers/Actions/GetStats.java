@@ -1,12 +1,8 @@
 package cinema.Controllers.Actions;
 
 import cinema.exeptions.AccessDenied;
-import cinema.items.Seat;
-import cinema.items.Ticket;
 import cinema.mockDB.CinemaMock;
 import cinema.mockDB.TicketsMock;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.HttpStatus;
 
 import java.util.HashMap;
@@ -16,7 +12,7 @@ public class GetStats {
     public static Map<String, Integer> stats(String password) throws AccessDenied{
         checkAccess(password);
 
-        Map<String, Integer> response = new HashMap();
+        Map<String, Integer> response = new HashMap<>();
 
         response.put("current_income",getIncome());
         response.put("number_of_available_seats",getNumbOfAvailableSeats());
